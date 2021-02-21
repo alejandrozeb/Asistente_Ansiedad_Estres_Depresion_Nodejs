@@ -1,8 +1,9 @@
+const {HomeService} = require("../services/index");
+class HomeController{}
 
+HomeController.index = (req,res)=>{
+    res.send(HomeService.index());
+    //res.send("hi desde controller");
+};
 
-class HomeController{
-    
-    index(req,res){
-        return res.send();
-    }
-}
+module.exports = HomeController;
