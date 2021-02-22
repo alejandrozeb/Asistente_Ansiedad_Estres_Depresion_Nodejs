@@ -8,6 +8,10 @@ const routes = require('../routes/index');
 module.exports = app =>{
     app.set('port', process.env.PORT || 3000);
 
+    app.set('view engine', 'pug');
+    app.set('views', path.join(__dirname,'../views'));
+
+
     app.use(morgan('dev'));
     app.use(express.urlencoded({extended:false}));
     app.use(express.json());
