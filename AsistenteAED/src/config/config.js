@@ -3,6 +3,7 @@ module.exports = {
         username: "root",
         password: "",
         database: "sequelize",
-        host: "localhost"
+        host: "localhost",
+        port: 3000
     }
 }

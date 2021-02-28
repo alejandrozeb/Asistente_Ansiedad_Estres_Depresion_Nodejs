@@ -5,6 +5,7 @@ const sequelize = new Sequelize(
     database.username,
     database.password,
     {
+        port: database.port,
         host: database.host,
         dialect: "mssql"
     }
