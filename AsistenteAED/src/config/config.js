@@ -2,8 +2,8 @@ module.exports = {
     database:{
         username: "root",
         password: "",
-        database: "sequelize",
+        database: "agenciadeviajes",
         host: "localhost",
-        port: 3000
+        port: 3308
     }
 }
