@@ -2,11 +2,15 @@ const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = new Sequelize('sqlite::memory:');
 
 const User = sequelize.define('User', {
-  firstName: {
+  p_id: {
     type: DataTypes.STRING,
     allowNull: false
   },
-  lastName: {
+  p_email: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  p_password: {
     type: DataTypes.STRING
     // allowNull defaults to true
   }
