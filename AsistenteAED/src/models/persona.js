@@ -14,7 +14,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Persona.init({
-    p_id: DataTypes.STRING,
     p_email: DataTypes.STRING,
     p_password: DataTypes.STRING
   }, {
