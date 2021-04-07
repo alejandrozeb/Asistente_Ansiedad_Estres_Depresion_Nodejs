@@ -10,7 +10,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       u_telefono: {
-        type: Sequelize.INTEGER(100)
+        type: Sequelize.INTEGER(50)
       },
       u_genero: {
         type: Sequelize.STRING

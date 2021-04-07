@@ -10,7 +10,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       d_telefono: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER(50)
       },
       d_imagen: {
         type: Sequelize.STRING
