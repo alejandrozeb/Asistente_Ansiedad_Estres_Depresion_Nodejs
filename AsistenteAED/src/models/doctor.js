@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       models.Persona.hasOne(Doctor);
       Doctor.belongsTo(models.Persona);
+      
     }
   };
   Doctor.init({
