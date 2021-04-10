@@ -1,6 +1,6 @@
-const {PersonaRepository} = require('../repositories/index');
+const PersonaRepository = require('../repositories/personaRepostitory');
 class PersonaService{
-    obtenerPersonas(){
+    static obtenerPersonas(){
         let personas = PersonaRepository.getAll();
         return personas;
     }

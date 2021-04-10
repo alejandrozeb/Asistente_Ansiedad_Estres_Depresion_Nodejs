@@ -1,6 +1,6 @@
 const { Persona } = require("../models/persona");
 class PersonaRepository {
-  getAll() {
+  static getAll() {
     return Persona.findAll();
   }
 
