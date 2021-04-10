@@ -1,3 +1,4 @@
 module.exports = {
-    HomeService: require("./homeService")
+    HomeService: require("./homeService"),
+    PersonaService: require("./PersonaService")
 }
