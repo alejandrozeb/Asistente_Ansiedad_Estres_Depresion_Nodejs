@@ -1,7 +1,11 @@
-const { Persona } = require("../models/persona");
+const  Persona  = require("../models/persona");
 class PersonaRepository {
-  static getAll() {
+  static  getAll() {
+    //console.log('hi desde repository');
     return Persona.findAll();
+    
+    //console.log("All users:", JSON.stringify(personas, null, 2));
+    
   }
 
   get(idPersona) {
@@ -17,4 +21,4 @@ class PersonaRepository {
   update() {}
 }
 
-module.exports = Persona;
+module.exports = PersonaRepository;

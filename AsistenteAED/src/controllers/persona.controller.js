@@ -2,10 +2,8 @@ const PersonaService = require("../services/PersonaService");
 class PersonaController{}
 
 PersonaController.index = (req,res)=>{
-    const personas =PersonaService.obtenerPersonas();
-    console.log(personas); 
-    res.send('hi desde personaController');
-    //res.send("hi desde controller");
+    const personas =PersonaService.obtenerPersonas(); 
+    res.send(personas);
 };
 
 module.exports = PersonaController;

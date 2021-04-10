@@ -1,8 +1,12 @@
 const PersonaRepository = require('../repositories/personaRepostitory');
 class PersonaService{
-    static obtenerPersonas(){
-        let personas = PersonaRepository.getAll();
-        return personas;
+    static async obtenerPersonas(){
+        try {
+           let personas = await PersonaRepository.getAll();
+           console.log(personas);   
+        } catch (t) {
+            console.log('hiiiiiiiii ' + t);
+        }
     }
 }
 
