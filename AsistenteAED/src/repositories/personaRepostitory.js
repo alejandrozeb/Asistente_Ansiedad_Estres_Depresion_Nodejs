@@ -1,12 +1,8 @@
-const  models  = require("../models/index");
+const models = require("../models/index");
 class PersonaRepository {
-  static async getAll() {
+  static async obtenerTodos() {
     let personaquery = await models.Persona.findAll();
-    return personaquery;
-    
-    
-    //console.log("All users:", JSON.stringify(personas, null, 2));
-    
+    return JSON.stringify(personaquery);
   }
 
   get(idPersona) {
