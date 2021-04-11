@@ -2,7 +2,7 @@ const PersonaRepository = require('../repositories/personaRepostitory');
 class PersonaService{
     static async obtenerPersonas(){
         try {
-           let personas = await PersonaRepository.getAll();
+           let personas = PersonaRepository.getAll();
            console.log(personas);   
         } catch (t) {
             console.log('hiiiiiiiii ' + t);

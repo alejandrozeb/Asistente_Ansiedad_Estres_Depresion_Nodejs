@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       models.Usuario.hasOne(contacto);
-      contacto.belongsTo(modelos.Usuario);
+      contacto.belongsTo(models.Usuario);
     }
   };
   contacto.init({
