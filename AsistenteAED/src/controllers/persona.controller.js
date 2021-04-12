@@ -1,9 +1,10 @@
 const PersonaService = require("../services/PersonaService");
 class PersonaController{}
 
-PersonaController.index = (req,res)=>{
-    const personas =PersonaService.obtenerPersonas(); 
-    res.send(personas);
+PersonaController.index = async (req,res)=>{
+    const personas = await PersonaService.obtenerPersonas();
+    console.log('hi ' + personas); 
+    //res.send(JSON.stringify(personas));
 };
 
 module.exports = PersonaController;
