@@ -3,7 +3,7 @@ class HomeController{}
 
 HomeController.index = (req,res)=>{
     home = HomeService.index();
-    res.render('main');
+    res.render('index');
 };
 
 module.exports = HomeController;
