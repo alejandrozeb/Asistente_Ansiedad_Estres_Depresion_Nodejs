@@ -1,5 +1,6 @@
 module.exports = {
   HomeRoute: require("./homeRoutes"),
   PersonaRoute: require("./personaRoutes"),
-  IngresaRoute: require("./ingresaRoutes")
+  IngresaRoute: require("./ingresaRoutes"),
+  RegistraRoute: require("./registraRoutes"),
 };
