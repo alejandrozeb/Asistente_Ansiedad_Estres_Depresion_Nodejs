@@ -2,8 +2,25 @@ div(class="container mt-5 align-items-center")
     div(class="row col-12 justify-content-md-center")
         form(action="" class="mt-5 col-6")
             div(class="mb-3")
-                label(for="Nombre" class="form-label") Nombre  
-                input(type="text" class="form-control" placeholder="Nombre Completo" aria-label="Nombre")  
+                label(for="Nombre" class="form-label") Nombre Completo
+                input(type="text" class="form-control" placeholder="Nombre Completo" aria-label="Nombre" name="Nombre")
+            div(class="mb-3")
+                label(for="Number" class="form-label") Telefono  
+                input(type="number" class="form-control" placeholder="Numero de Telefono" aria-label="Numero" name="Telefono")
+            div(class="mb-3")
+                label(for="Genero" class="form-label") Genero 
+                select(name="Genero" class="form-select" )
+                    option(value="Femenino") Femenino
+                    option(value="Masculino") Masculino
+                    option(value="Otros") Otros
+            div(class="mb-3")
+                label(for="Email" class="form-label") Email  
+                input(type="email" class="form-control" placeholder="Correo electronico" aria-label="Correo electronico" name="Email")
+            div(class="mb-3")
+                label(for="Password" class="form-label") Contraseña  
+                input(type="password" class="form-control" placeholder="Ingresa tu contraseña" aria-label="Contraseña" name="Password")  
+            div(class="mb-3")
+                button(class="btn btn-success") Enviar 
 
 
 
