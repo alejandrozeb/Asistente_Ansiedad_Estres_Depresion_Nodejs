@@ -3,22 +3,22 @@ div(class="container mt-5 align-items-center")
         form(action="registrar/GuardarUsuario" method="POST" class="mt-5 col-6")
             div(class="mb-3")
                 label(for="Nombre" class="form-label") Nombre Completo
-                input(type="text" class="form-control" placeholder="Nombre Completo" aria-label="Nombre" name="Nombre")
+                input(type="text" class="form-control" placeholder="Nombre Completo" aria-label="Nombre" name="Nombre" required)
             div(class="mb-3")
                 label(for="Number" class="form-label") Telefono  
-                input(type="number" class="form-control" placeholder="Numero de Telefono" aria-label="Numero" name="Telefono")
+                input(type="number" class="form-control" placeholder="Numero de Telefono" aria-label="Numero" name="Telefono" required)
             div(class="mb-3")
                 label(for="Genero" class="form-label") Genero 
-                select(name="Genero" class="form-select" )
+                select(name="Genero" class="form-select" required)
                     option(value="Femenino") Femenino
                     option(value="Masculino") Masculino
                     option(value="Otros") Otros
             div(class="mb-3")
                 label(for="Email" class="form-label") Email  
-                input(type="email" class="form-control" placeholder="Correo electronico" aria-label="Correo electronico" name="Email")
+                input(type="email" class="form-control" placeholder="Correo electronico" aria-label="Correo electronico" name="Email" required)
             div(class="mb-3")
                 label(for="Password" class="form-label") Contraseña  
-                input(type="password" class="form-control" placeholder="Ingresa tu contraseña" aria-label="Contraseña" name="Password")  
+                input(type="password" class="form-control" placeholder="Ingresa tu contraseña" aria-label="Contraseña" name="Password" required)  
             div(class="mb-3")
                 button(class="btn btn-success") Enviar 
 
