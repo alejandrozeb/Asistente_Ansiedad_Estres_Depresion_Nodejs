@@ -17,7 +17,11 @@ class PersonaService {
     );
     
     console.log("desde servicio");
-    console.log(persona);
+    const guardarPersona = await persona.guardarPersona();
+    //const guardarPersona = await persona.guardarPersona();
+    console.log(guardarPersona.id);
+    const guardarUsuario = await persona.guardarUsuario(guardarPersona.id); 
+    console.log(guardarUsuario);
     //console.log(Nombre, Telefono, Genero, Email, Password);
   }
 }

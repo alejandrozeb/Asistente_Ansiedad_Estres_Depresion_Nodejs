@@ -12,6 +12,15 @@ class PersonaRepository {
     return models.Persona.findAll();
   }
 
+  guardarPersona(){
+    return models.Persona.create({p_email: this.email, p_password: this.password});
+  }
+
+  guardarUsuario(idPersona){
+    console.log(idPersona);
+    return models.Usuario.create({u_nombre: this.nombre ,u_telefono: this.telefono, u_genero: this.genero, fk_idPersona: idPersona});
+  }
+
   get(idPersona) {
     return Persona.find({
       where: {
