@@ -1,11 +1,11 @@
 const models = require("../models/index");
 class PersonaRepository {
-  constructor(data){
-    this.nombre
-    this.telefono
-    this.genero
-    this.email
-    this.password
+  constructor(Nombre, Telefono, Genero, Email, Password){
+    this.nombre = Nombre;
+    this.telefono = Telefono;
+    this.genero = Genero;
+    this.email = Email;
+    this.password = Password;
   }
 
   static obtenerTodos() {
