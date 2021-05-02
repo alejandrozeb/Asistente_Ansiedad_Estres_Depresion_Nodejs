@@ -16,32 +16,13 @@ class PersonaRepository {
     return models.Persona.create({
       p_email: this.email,
       p_password: this.password,
-    });
-  }
-
-  guardarPersona2() {
-    return models.Persona.create({
-      p_email: this.email,
-      p_password: this.password,
       Usuario: {
         u_nombre: this.nombre,
         u_telefono: this.telefono,
         u_genero: this.genero,        
       }
     },{
-      //association: models.Persona.Usuario,
       include:[models.Usuario],
-    });
-  }
-
-  guardarUsuario(idPersona) {
-    return models.Usuario.create({
-      u_nombre: this.nombre,
-      u_telefono: this.telefono,
-      u_genero: this.genero,
-      fk_idPersona: idPersona,
-    },{
-      association: models.Persona.Usuario
     });
   }
 
