@@ -2,27 +2,27 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-     await queryInterface.createTable('Usuarios', {
+    await queryInterface.createTable('contactos', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      u_telefono: {
+      c_email: {
+        type: Sequelize.STRING
+      },
+      c_nombre: {
+        type: Sequelize.STRING
+      },
+      c_telefono: {
         type: Sequelize.INTEGER(50)
       },
-      u_genero: {
-        type: Sequelize.STRING
-      },
-      u_nombre: {
-        type: Sequelize.STRING
-      },
-      fk_idPersona: {
+      UsuarioId: {
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: 'personas',
+            tableName: 'usuarios',
             key: 'id'
           },
         },
@@ -40,6 +40,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Usuarios');
+    await queryInterface.dropTable('contactos');
   }
 };

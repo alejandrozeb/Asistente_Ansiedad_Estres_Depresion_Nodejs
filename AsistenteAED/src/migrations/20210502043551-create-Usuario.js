@@ -2,26 +2,23 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('Doctors', {
+    await queryInterface.createTable('Usuarios', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      d_telefono: {
+      u_telefono: {
         type: Sequelize.INTEGER(50)
       },
-      d_imagen: {
+      u_genero: {
         type: Sequelize.STRING
       },
-      d_nombre: {
+      u_nombre: {
         type: Sequelize.STRING
       },
-      d_apellido:{
-        type: Sequelize.STRING
-      },
-      fk_idPersona: {
+      PersonaId: {
         type: Sequelize.INTEGER,
         references: {
           model: {
@@ -43,6 +40,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Doctors');
+    await queryInterface.dropTable('Usuarios');
   }
 };
