@@ -8,6 +8,8 @@ class PersonaService {
   static async guardar(data) {
     let { Nombre, Telefono, Genero, Email, Password } = data;
 
+    //tratar password
+
     let persona = new PersonaRepository(
       Nombre,
       Telefono,
