@@ -10,19 +10,17 @@ class PersonaService {
   static async guardar(data) {
     let { Nombre, Telefono, Genero, Email, Password } = data;
 
-    //tratar password
-    let passwordEncriptado = new PasswordBcrypt("123456");
-    passwordEncriptado.encriptar();
+    let passwordBcrypt = new PasswordBcrypt("123456");
+    let passwordHash = passwordBcrypt.encriptar();
 
-
-    /* let persona = new PersonaRepository(
+    let persona = new PersonaRepository(
       Nombre,
       Telefono,
       Genero,
       Email,
-      Password
+      passwordHash
     );
-    const guardarPersona = await persona.guardarPersona(); */
+    const guardarPersona = await persona.guardarPersona();
   }
 }
 

@@ -8,6 +8,7 @@ class PasswordBcrypt{
     encriptar(){
         let salt = bcrypt.genSaltSync(10);
         this.hashPassword = bcrypt.hashSync(this.password, salt);
+        return this.hashPassword;
     }
 
 
