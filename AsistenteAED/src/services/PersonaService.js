@@ -20,9 +20,13 @@ class PersonaService {
       Email,
       passwordHash
     );
-    const guardarPersona = await persona.guardarPersona();
+    let guardarPersona = await persona.guardarPersona();
+      //cambiar a JSON
+    let jsonDataPersona =JSON.stringify(guardarPersona);
+    //console.log("Persona: "+jsonDataPersona.id); 
+    console.log("Usuario: " + jsonDataPersona); 
+    return guardarPersona;
   }
 }
 
 module.exports = PersonaService;
-//logica de negocio
