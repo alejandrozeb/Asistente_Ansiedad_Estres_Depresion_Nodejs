@@ -21,10 +21,11 @@ class PersonaService {
       passwordHash
     );
     let guardarPersona = await persona.guardarPersona();
-      //cambiar a JSON
-    let jsonDataPersona =JSON.stringify(guardarPersona);
-    //console.log("Persona: "+jsonDataPersona.id); 
-    console.log("Usuario: " + jsonDataPersona); 
+ 
+    console.log(guardarPersona.id);
+    console.log(guardarPersona.Usuario.id);
+
+
     return guardarPersona;
   }
 }
