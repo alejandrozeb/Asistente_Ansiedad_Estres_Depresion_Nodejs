@@ -1,5 +1,6 @@
 const PersonaRepository = require("../repositories/personaRepostitory");
 const PasswordBcrypt = require("../security/PasswordBcrypt");
+const ParseToJson = require("../communication/parseToJson");
 
 class PersonaService {
   static async obtenerPersonas() {
@@ -21,12 +22,11 @@ class PersonaService {
       passwordHash
     );
     let guardarPersona = await persona.guardarPersona();
- 
-    console.log(guardarPersona.id);
-    console.log(guardarPersona.Usuario.id);
 
-
-    return guardarPersona;
+    let dataJson = new ParseToJson(guardarPersona);
+    let JsonDataIds = dataJson.DevolverIdPersonaIdUsuario();    
+    
+    return JsonDataIds;
   }
 }
 
