@@ -7,7 +7,8 @@ RegistraController.index = async (req,res)=>{
 };
 
 RegistraController.guardar = async (req, res) =>{
-    PersonaService.guardar( req.body);
+   let dataIds = await PersonaService.guardar( req.body);
+   res.render("principal/principal", dataIds);
 }
 
 module.exports = RegistraController;
