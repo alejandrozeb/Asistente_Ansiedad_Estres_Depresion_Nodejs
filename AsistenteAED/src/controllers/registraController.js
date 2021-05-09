@@ -8,7 +8,9 @@ RegistraController.index = async (req,res)=>{
 
 RegistraController.guardar = async (req, res) =>{
    let dataIds = await PersonaService.guardar( req.body);
-   res.render("principal/principal", dataIds);
+   console.log(dataIds);
+   //deberia llamar a otra ruta
+   res.render("principal/principal", {dataIds});
 }
 
 module.exports = RegistraController;
