@@ -3,9 +3,9 @@ div(class="container mt-5 align-items-center")
         form(action="ingresar/Verificar" method="POST" class="mt-5 col-6")
             div(class="mb-3")
                 label(for="Usuario" class="form-label") Email
-                input(type="email" class="form-control" id="Usuario" placeholder="name@correo.com")
+                input(type="email" class="form-control" id="Usuario" placeholder="name@correo.com" name="Usuario" required)
             div(class="mb-3")
                 label(for="password" class="form-label") Contraseña
-                input(type="password" class="form-control" id="password" placeholder="")
+                input(type="password" class="form-control" id="password" placeholder="" name="password" required)
             div(class="mb-3")
                 button(type="submit" class="btn btn-success") Enviar             
