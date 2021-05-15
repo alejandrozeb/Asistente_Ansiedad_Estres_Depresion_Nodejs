@@ -13,16 +13,27 @@ class PersonaRepository {
   }
 
   guardarPersona() {
-    return models.Persona.create({
-      p_email: this.email,
-      p_password: this.password,
-      Usuario: {
-        u_nombre: this.nombre,
-        u_telefono: this.telefono,
-        u_genero: this.genero,        
+    return models.Persona.create(
+      {
+        p_email: this.email,
+        p_password: this.password,
+        Usuario: {
+          u_nombre: this.nombre,
+          u_telefono: this.telefono,
+          u_genero: this.genero,
+        },
+      },
+      {
+        include: [models.Usuario],
       }
-    },{
-      include:[models.Usuario],
+    );
+  }
+
+  static obtener(usuario) {
+    return models.Persona.findOne({
+      where: {
+        p_email: usuario,
+      },
     });
   }
 
