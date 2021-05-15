@@ -24,9 +24,17 @@ class PersonaService {
     let guardarPersona = await persona.guardarPersona();
 
     let dataJson = new ParseToJson(guardarPersona);
-    let JsonDataIds = dataJson.DevolverIdPersonaIdUsuario();    
-    
+    let JsonDataIds = dataJson.DevolverIdPersonaIdUsuario();
+
     return JsonDataIds;
+  }
+
+  static async autenticar(dataIds) {
+    let passwordBcrypt = new PasswordBcrypt("123456");
+    let passwordHash = passwordBcrypt.encriptar();
+    
+    console.log(dataIds.Usuario);
+    console.log(dataIds.password);
   }
 }
 
