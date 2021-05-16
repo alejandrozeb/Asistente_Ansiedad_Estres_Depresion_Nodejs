@@ -11,7 +11,7 @@ class PersonaService {
   static async guardar(data) {
     let { Nombre, Telefono, Genero, Email, Password } = data;
 
-    let passwordBcrypt = new PasswordBcrypt("123456");
+    let passwordBcrypt = new PasswordBcrypt(Password);
     let passwordHash = passwordBcrypt.encriptar();
 
     let persona = new PersonaRepository(
@@ -30,14 +30,12 @@ class PersonaService {
   }
 
   static async autenticar(dataIds) {
-    let passwordBcrypt = new PasswordBcrypt("123456");
-    let passwordHash = passwordBcrypt.encriptar();
-
     let usuarioData = await PersonaRepository.obtener(dataIds.Usuario);
-    //comparar la contraseña con bcrypt
-    console.log(usuarioData);
-    console.log(dataIds.Usuario);
-    console.log(dataIds.password);
+
+    let passwordBcrypt = new PasswordBcrypt(dataIds.password, usuarioData.p_password);
+    let verifica = passwordBcrypt.comparar();
+    
+    return verifica;
   }
 }
 
